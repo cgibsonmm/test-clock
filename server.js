@@ -15,12 +15,8 @@ let api = axios.create({
   },
 });
 
-app.get("/res", () => {
-  console.log("Button click");
-  api
-    .post("/", { frames: [{ text: "We hear you!", icon: "i653" }] })
-    .then(() => console.log("sent"))
-    .catch((e) => console.log(e.message));
+app.get("/res", (req, res) => {
+  res.json({ frames: [{ text: "We Hear You!", icon: "i746" }] });
 });
 
 let count = 0;
