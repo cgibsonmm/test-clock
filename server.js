@@ -20,6 +20,10 @@ app.get("/res", (req, res) => {
   api.post("/", { frames: [{ text: `We Hear You!`, icon: "i746" }] });
 });
 
+app.post("/sms", (res, res) => {
+  console.log(res.body);
+});
+
 let count = 0;
 
 setInterval(() => {
