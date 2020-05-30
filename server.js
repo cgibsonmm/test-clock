@@ -24,7 +24,7 @@ app.get("/res", (req, res) => {
 
 app.post("/sms", (req, res) => {
   console.log(req.body.Body);
-  api.post("/", { frames: [{ text: req.body.Body, icon: "i6313" }] });
+  api.post("/", { frames: [{ text: req.body.Body, icon: "i16313" }] });
   res.end();
 });
 
