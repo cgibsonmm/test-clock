@@ -16,7 +16,7 @@ let api = axios.create({
 });
 
 app.get("/res", (req, res) => {
-  res.status(200);
+  res.json([]);
   api.post("/", { frames: [{ text: `We Hear You!`, icon: "i59" }] });
 });
 
