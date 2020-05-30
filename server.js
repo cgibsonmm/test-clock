@@ -23,7 +23,7 @@ app.get("/res", (req, res) => {
 });
 
 app.post("/sms", (req, res) => {
-  console.log(req["Body"]);
+  console.log(req.body.Body);
 
   res.end();
 });
