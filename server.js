@@ -27,8 +27,8 @@ setInterval(() => {
   api
     .post("/", { frames: [{ text: `${count}`, icon: "i59" }] })
     .then(() => {
-      console.log("test");
+      console.log(`test ${count}`);
     })
     .catch((e) => console.log(e.message));
-}, 15000);
+}, 30000);
 app.listen(PORT, console.log(`App on *:${PORT}`));
