@@ -6,7 +6,7 @@ const app = express();
 
 let api = axios.create({
   baseURL:
-    "https://developer.lametric.com/api/v1/dev/widget/update/com.lametric.8a87576a21178974bda26ba7d30de31a/1",
+    "https://developer.lametric.com/api/v1/dev/widget/update/com.lametric.8a87576a21178974bda26ba7d30de31a/2",
   headers: {
     "X-Access-Token":
       "OTEwZmM5ZjM3Zjg0YTBiMzA1ZTEzZTA5YTk0OGEyNjZiZWJhMjNiNjU5MGI0Zjc2OThjNDdkODlhMzgxZmY1NQ==",
