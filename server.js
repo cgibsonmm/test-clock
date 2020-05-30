@@ -15,13 +15,10 @@ let api = axios.create({
   },
 });
 
-app
-  .get("/res", (req, res) => {
-    res.status(200);
-  })
-  .then(() => {
-    api.post("/", { frames: [{ text: `We Hear You!`, icon: "i59" }] });
-  });
+app.get("/res", (req, res) => {
+  res.status(200);
+  api.post("/", { frames: [{ text: `We Hear You!`, icon: "i59" }] });
+});
 
 let count = 0;
 
