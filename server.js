@@ -30,13 +30,13 @@ app.post("/sms", (req, res) => {
 
 let count = 0;
 
-setInterval(() => {
-  count += 1;
-  api
-    .post("/", { frames: [{ text: `${count}`, icon: "i59" }] })
-    .then(() => {
-      console.log(`test ${count}`);
-    })
-    .catch((e) => console.log(e.message));
-}, 30000);
+// setInterval(() => {
+//   count += 1;
+//   api
+//     .post("/", { frames: [{ text: `${count}`, icon: "i59" }] })
+//     .then(() => {
+//       console.log(`test ${count}`);
+//     })
+//     .catch((e) => console.log(e.message));
+// }, 30000);
 app.listen(PORT, console.log(`App on *:${PORT}`));
