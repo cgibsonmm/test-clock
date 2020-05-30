@@ -17,7 +17,7 @@ let api = axios.create({
 
 app.get("/res", (req, res) => {
   res.json([]);
-  api.post("/", { frames: [{ text: `We Hear You!`, icon: "i59" }] });
+  api.post("/", { frames: [{ text: `We Hear You!`, icon: "i746" }] });
 });
 
 let count = 0;
