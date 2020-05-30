@@ -13,7 +13,7 @@ let api = axios.create({
   },
 });
 
-app.use("/res", () => {
+app.get("/res", () => {
   console.log("Button click");
 });
 
