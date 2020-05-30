@@ -1,8 +1,10 @@
 const PORT = process.env.PORT || 3000;
+const morgan = require("morgan");
 const express = require("express");
 const axios = require("axios");
 
 const app = express();
+app.use(morgan("dev"));
 
 let api = axios.create({
   baseURL:
@@ -15,7 +17,10 @@ let api = axios.create({
 
 app.get("/res", () => {
   console.log("Button click");
-  api.post("/", { frames: [{ text: "We hear you!", icon: "i653" }] });
+  api
+    .post("/", { frames: [{ text: "We hear you!", icon: "i653" }] })
+    .then(() => console.log("sent"))
+    .catch((e) => console.log(e.message));
 });
 
 let count = 0;
@@ -28,5 +33,5 @@ setInterval(() => {
       console.log("test");
     })
     .catch((e) => console.log(e.message));
-}, 5000);
+}, 15000);
 app.listen(PORT, console.log(`App on *:${PORT}`));
